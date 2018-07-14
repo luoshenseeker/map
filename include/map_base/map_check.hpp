@@ -25,11 +25,11 @@ public:
     }
 
     Value_t &at(const Key_t &key) {
-        return this->at(key);
+        return this->base.at(key);
     }
 
     const bool has(const Key_t &key) {
-        return this->base.find(key) == this->base.end();
+        return this->base.find(key) != this->base.end();
     }
 
     const int size() {
@@ -43,6 +43,10 @@ public:
         } else {
             return false;
         }
+    }
+
+    ::std::string author(){
+        return "::std::string";
     }
 };
 } // namespace WMJTask

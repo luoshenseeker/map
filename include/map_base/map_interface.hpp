@@ -1,7 +1,7 @@
 #pragma once
 #include  <utility> // ::std::pair
+#include <string> // ::std::string
 namespace WMJTask {
-
 template <typename Key_t,
           typename Value_t>
 class mapInterface {
@@ -60,12 +60,19 @@ public:
 
     /**
      * @brief 删除一个下标对应的对
-     * 
+     *
      * @param key 需要删除的下标
      * @return true 删除成功
      * @return false 删除失败,或者元素不存在
      */
     virtual bool erase(const Key_t &key) = 0;
+
+    /**
+     * @brief 在这里填入你的名字
+     * 
+     * @return ::std::string 
+     */
+    virtual ::std::string author() = 0;
 };
 
 } // namespace WMJTask

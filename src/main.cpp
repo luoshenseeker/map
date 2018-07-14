@@ -3,4 +3,5 @@
 using ::std::map;
 int main() {
     WMJTask::mapCheck<::std::string, int> map;
+    WMJTask::mapInsertTest(map);
 }
