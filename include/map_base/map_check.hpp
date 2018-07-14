@@ -45,8 +45,17 @@ public:
         }
     }
 
-    ::std::string author(){
+    ::std::string author() {
         return "::std::string";
+    }
+
+
+    ::std::vector<std::pair<Key_t, Value_t> > showAll() {
+        ::std::vector<std::pair<Key_t, Value_t> > items;
+        for(auto item : this->base) {
+            items.push_back(item);
+        }
+        return items;
     }
 };
 } // namespace WMJTask

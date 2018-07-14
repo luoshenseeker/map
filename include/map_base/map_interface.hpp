@@ -1,6 +1,7 @@
 #pragma once
 #include  <utility> // ::std::pair
 #include <string> // ::std::string
+#include <vector>
 namespace WMJTask {
 template <typename Key_t,
           typename Value_t>
@@ -69,10 +70,17 @@ public:
 
     /**
      * @brief 在这里填入你的名字
-     * 
-     * @return ::std::string 
+     *
+     * @return ::std::string
      */
     virtual ::std::string author() = 0;
+
+    /**
+     * @brief 遍历函数
+     * 给出一份所有map内元素的列表
+     * @return ::std::vector<std::pair<Key_t,Value_t> > map内元素的列表
+     */
+    virtual ::std::vector<std::pair<Key_t, Value_t> > showAll() = 0;
 };
 
 } // namespace WMJTask
